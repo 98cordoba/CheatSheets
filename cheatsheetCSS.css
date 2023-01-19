@@ -1,0 +1,297 @@
+/* INCLUDE EXTERNAL STYLESSHEET */
+/* <link rel="stylesheet" type="text/css" href="/style.css"/>
+/* WRITE INTERNAL STYLES CSS IN HTML  */
+/* <style type="text/css">
+        selector:{
+            property: value;
+        }
+    </style>
+*/
+/* SELECTORS  */
+* {
+    /* ALL ELEMENTS  */
+    color: #000;
+}
+
+div {
+    /* ALL div TAGS  */
+    color: #000;
+}
+
+div,
+p {
+    /* ALL divs AND PARAGRAPHS  */
+    color: #000;
+}
+
+div p {
+    /* PARAGRAPHS INSIDE divs */
+    color: #000;
+}
+
+div>p {
+    /*    ALL p TAGS, ONE LEVEL DEEP IN div      */
+    color: #000;
+}
+
+div+p {
+    /*    p TAGS INMEDIATELY AFTHER div      */
+    color: #000;
+}
+
+div~p {
+    /*   p TAGS PRECEDED BY div       */
+    color: #000;
+}
+
+.className {
+    /*    ALL ELEMENTS WITH CLASS      */
+    color: #000;
+}
+
+#idElementName {
+    /*    ALL ELEMENTS WITH ID      */
+    color: #000;
+}
+
+div.className {
+    /*    divs WITH CERTAIN CLASSNAME      */
+    color: #000;
+}
+
+div#idElementName {
+    /*    divs WITH CERTAIN ID      */
+    color: #000;
+}
+
+#idElementName * {
+    /*    ALL ELEMENTS INSIDE #idElementName      */
+    color: #000;
+}
+
+/*    PSEUDO CLASSES      */
+a:link {
+    /*     LINK IN NORMAL STATE     */
+    color: #000;
+}
+
+a:active {
+    /*     LINK IN CLICKED STATE     */
+    color: #000;
+}
+
+a:hover {
+    /*     LINK WITH MOUSE OVER IT     */
+    color: #000;
+}
+
+a:visited {
+    /*     VISITED LINK     */
+    color: #000;
+}
+
+p::after {
+    content: "yo";
+    /* ADD CONTENT AFTER p         */
+}
+
+p::before {
+    content: "yo";
+    /* ADD CONTENT AFTER p         */
+}
+
+div:empty {
+    /*   ELEMENT WITH NO CHILDREN       */
+    color: #000;
+}
+
+input:checked {
+    /*   CHECKED INPUTS       */
+    color: #000;
+}
+
+input:disabled {
+    /*  DISABLED INPUTS        */
+    color: #000;
+}
+
+input:enabled {
+    /*  ENABLED INPUTS        */
+    color: #000;
+}
+
+input:focus {
+    /*  INPUT HAS FOCUS        */
+    color: #000;
+}
+
+input:in-range {
+    /*  VALUE IN RANGE        */
+    color: #000;
+}
+
+input:out-of-range {
+    /*  INPUT VALUE OUT OF RANGE        */
+    color: #000;
+}
+
+input:valid {
+    /*  INPUT WITH VALID VALUE        */
+    color: #000;
+}
+
+input:invalid {
+    /*   INPUT WITH INVALID VALUE       */
+    color: #000;
+}
+
+input:optional {
+    /*   NO REQUIRED ATTRIBUTE       */
+    color: #000;
+}
+
+input:required {
+    /*   INPUT WITH REQIRED ATTRIBUTE       */
+    color: #000;
+}
+
+input:read-only {
+    /*   INPUT WITH READONLY ATTRIBUTE       */
+    color: #000;
+}
+
+input:read-write {
+    /*    INPUT WITH NO READONLY ATTRIBUTE      */
+    color: #000;
+}
+
+P::first-letter {
+    /*    FIRST LETTER IN p      */
+    color: #000;
+}
+
+p::first-line {
+    /*    FIRST LINE IN p      */
+    color: #000;
+}
+
+p:first-of-type {
+    /*    FIRST OF SOME TYPE      */
+    color: #000;
+}
+
+p:last-of-type {
+    /*    LAST OF SOME TYPE      */
+    color: #000;
+}
+
+p:lang(en) {
+    /*    p WITH en LENGUAGE ATTRIBUTE      */
+    color: #000;
+}
+
+:not(span) {
+    /*    ELEMENT THAT'S NOT A span      */
+    color: #000;
+}
+
+p:first-child {
+    /*    FIRST CHILD OF ITS PARENT      */
+    color: #000;
+}
+
+p:last-child {
+    /*    LAST CHILD OF ITS PARENT      */
+    color: #000;
+}
+
+p:nth-child(2) {
+    /*    SECOND CHILD OF ITS PARENT      */
+    color: #000;
+}
+
+p:nth-child(3n+1) {
+    /*    nth-child (an + b) FORMULA      */
+    color: #000;
+}
+
+p:nth-last-child(2) {
+    /*    SECOND CHILD FROM BEHIND      */
+    color: #000;
+}
+
+p:nth-of-type() {
+    /*    SECOND p OF ITS PARENT      */
+    color: #000;
+}
+
+p:nth-last-of-type(2) {
+    /*    SECOND p FROM BEHIND      */
+    color: #000;
+}
+
+p:only-of-type {
+    /*    UNIQUE OF ITS PARENT      */
+    color: #000;
+}
+
+p:only-child {
+    /*    ONLY CHILD OF ITS PARENT      */
+    color: #000;
+}
+
+:root {
+    /*    DOCUMENTS ROOT ELEMENT      */
+    color: #000;
+}
+
+::selection {
+    /*    PORTION SELECTED BY USER      */
+    color: #000;
+}
+
+:target {
+    /*    HIGHLIGHT ACTIVE ANCHOR      */
+    color: #000;
+}
+
+/* ATTRIBUTE SELECTORS */
+a[target] {
+    /*   LINKS WITH A TARGET ATTRIBUTE       */
+    color: #000;
+}
+
+a[target="_blank"] {
+    /*   LINKS WICH OPEN IN NEW TAB       */
+    color: #000;
+}
+
+[title~="chair"] {
+    /*   TITLE ELEMENT CONTAINING A WORD       */
+    color: #000;
+}
+
+[class^="chair"] {
+    /*   CLASS STARTS WITH CHAIR       */
+    color: #000;
+}
+
+[class|="chair"] {
+    /*   CLASS STARTS WITH THE CHAIR WORD         */
+    color: #000;
+}
+
+[class*="chair"] {
+    /*   CLASS CONTAINS CHAIR       */
+    color: #000;
+}
+
+[class$="chair"] {
+    /*   CLASS ENDS WITH CHAIR       */
+    color: #000;
+}
+
+input[type="button"] {
+    /*   SPECIFIED INPUT TYPE       */
+    color: #000;
+}
