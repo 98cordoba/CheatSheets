@@ -111,8 +111,9 @@ Math.exp(1);                                                        //      = 2.
 Math.random();                                                      //      random number between 0 and 1
 Math.floor(Math.random() * 5) + 1;                                  //      random integer, from 1 to 5
 /*                  --  **  ARRAYS  **                                        */
-var arr = [1,2,3,4];
+var arr = [1,2,3,4,4];
 arr.at(1);                                                           //                                                 2
+arr.toString();                                                      //     CONVERT THE ARRAY TO A STRING
 arr.push(5);                                                         //     ADD ELEMENT TO THE END                  :   [ 1, 2, 3, 4, 5 ]
 arr.pop();                                                           //     REMOVE
 arr.fill(1);                                                         //     REMOVE LAST ELEMENT                     :   [ 1, 2, 3 ]
@@ -123,14 +124,14 @@ arr.map(item => 2*item);                                             //     SORT
 arr.filter(item => item > 2);                                        //     IS ARRAY CONTAINS A SPECIFIED VALUE     :   TRUE
 arr.find(item => item > 2);                                          //     MAP ELEMENTS                            :   [ 2, 3, 6, 8 ]
 arr.every(item => item > 0);                                         //     FILTER ELEMENT                          :   [ 3, 4 ]
+arr.indexOf(4)                                                       //     RETURNS THE INDEX OF THE ELEMENT        :   2
 arr.findIndex(item => item === 2);                                   //     FIND ELEMENT                            :   3 (FIRST MATCH)
 arr.reduce((prev,curr) => prev+curr ,0);                             //                                                 TRUE
-arr.toString();                                                      //                                                 1
-arr.join(" * ");                                                     //                                                 10
-arr.splice(2,0, "i","p");                                            //     CONVERT TO STRING
-arr.slice(1,4);                                                      //     JOIN                                    :   "1 * 2 * 3 * 4"
-arr.sort();                                                          //     ADD ELEMENTS                            :   [ 1, 2, 'i', 'p', 3, 4 ]
-x.sort(function(a,b){return a - b });                                //     SLICE ELEMENTS FROM [1] to [4-1]
+arr.slice(1,4);                                                      //     SLICE ELEMENTS FROM [1] to [4-1]        :   2,4
+arr.splice(2,0, "i","p");                                            //     ADD ELEMENTS                            :   [ 1, 2, 'i', 'p', 3, 4 ]
+arr.join(" * ");                                                     //     JOIN                                    :   "1 * 2 * 3 * 4"
+arr.sort();                                                          //     
+x.sort(function(a,b){return a - b });                                //     
 x.sort(function(a,b){return b - a });                                //     SORT STRING ALPHABETICALLY 
 x.sort(function(a,b){return 0.5 - Math.random()});                   //     NUMERIC SORT
 /*                  --**    DATES   **                                         */
@@ -168,6 +169,16 @@ try{                                                                //      ERRO
 } finally {                                                         //      EXECUTED REGARDLESS OF THE TRY / CATCH RESULT
     document.write("</br />Done");                          
 }
+/*                  --  **  ERRORS HANDLING IN JS **                                        */
+function name(params) {
+    try {
+        
+    } catch (error) {
+        
+    }
+    //  EXECUTES WHEN A JS PROMISE THAT HAS NO REJEACTION HANDLER IS REJACTED
+    window.addEventListener('unhandledrejection',function(){});
+}
 /*                  --  **  JSON    **                                            */
 var strg = '{"names":['+                                            //      CREATE JSON OBJECT
             '{"first":"Hakuna","lastN":"Matata"},'+
@@ -204,3 +215,49 @@ var FormEvent           = [ 'onblur', 'onchange', 'onfocus', 'onfocusin', 'onfoc
 var DragEvent           = [ 'ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover', 'ondragstart', 'ondrop'];
 var AnimationEvent      = [ 'animationend', 'animationiteration', 'animationstart'];
 var KeyboardEvent       = [ 'onkeydown', 'onkeypress', 'onkeyup'];
+/*                  --  **    OBJECTS  **                                        */
+const personObject = {
+    name: 'personName',
+    age: 25,
+    gender: 'male',
+};
+const jobObject = {
+    job: 'dev',
+    salary: 1000,
+}
+//  GET ALL OBJECTS KEYS
+Object.keys(personObject);  //  ['name','age','gender']
+//  GET ALL OBJECTS VALUES
+Object.values(personObject);    //  ['personName',25,'male']
+//  GET ALL OBJECTS ENTRIES
+Object.entries(personObject);   // [['name','personName'],['age',25],['gender','male']]
+//  ASSIGN OBJECT TO ANOTHER OBJECT
+Object.assign(personObject,jobObject);  //  {name: 'personName',age: 25,gender: 'male',job: 'dev',salary: 1000}
+/*                  --  **    SCOPE  **                                        */
+//  GLOBAL SCOPE
+const pie = 3.14;
+//  FUNCTION SCOPE
+function nameFunction(params) {
+    console.log(pie); // 3.14
+    const numFunction = 32; // FUNCTION SCOPE
+    console.log(numFunction);   //  32
+}
+//  BLOCK SCOPE
+if (condition) {
+    const fullName = 'Fabian Cordoba';  //  BLOCK SCOPE
+    console.log(fullName)   // BLOCK SCOPE
+}
+console.log(pie);  //  3.14
+console.log(numFunction);  //  ReferenceError: numFunction is not defined 
+console.log(fullName);  //  ReferenceError: fullName is not defined
+/*                  --  **    ASYNC/AWAIT  **                                        */
+//  USED ASYNC TO MAKE THE FUNCTION ACT ASYNCHRONOUS
+async function name(params) {
+    try {
+        //  USED AWAIT TO MAKE THE CODE WAIT UNTIL PROMISE RETURNS A RESULT
+    } catch (errr) {
+        console.log(errr)
+    }
+}
+
+
