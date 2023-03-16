@@ -7,24 +7,24 @@ console.log(a);
 document.write(a);
 alert(a);
 confirm("Really?");
-prompt("Your age?","0");
+prompt("Your age?", "0");
 /*                  --  **  FUNCTIONS   **                                      */
-function sum(a,b) {
-    return a+b;
+function sum(a, b) {
+    return a + b;
 }
 /*                  --  **  DATA TYPES  **                                     */
-const   age         =   20;                         /*  NUMBER      */
-const   name        =   'name';                     /*  STRING      */
-const   isMale      =   true;                       /*  BOOLEAN     */
-const   isFamele    =   false;                      /*  BOOLEAN     */
-const   hobbies     =   ['sports', 'cooking'];      /*  ARRAY       */
-const   address     =   { city: 'Alajuela'};        /*  OBJECT      */
-const   index       =   null;                       /*  NULL   */
-let     today;                                      /*  UNDEFINED        */
+const age = 20;                         /*  NUMBER      */
+const name = 'name';                     /*  STRING      */
+const isMale = true;                       /*  BOOLEAN     */
+const isFamele = false;                      /*  BOOLEAN     */
+const hobbies = ['sports', 'cooking'];      /*  ARRAY       */
+const address = { city: 'Alajuela' };        /*  OBJECT      */
+const index = null;                       /*  NULL   */
+let today;                                      /*  UNDEFINED        */
 /*                  --  **  Conditionals    **                                   */
 if (age > 20) {                                     /* Condition */
     console.log("");                                /* execute if condition is true     */
-}else{                                              /* else block is optional           */
+} else {                                              /* else block is optional           */
     console.log("");                                /* execute if condition is false    */
 }
 /*                  --  **  FOR LOOP    **                                       */
@@ -37,16 +37,16 @@ const person = {
     age: 30,
 };
 for (let key in person) {
-    console.log(key,person[key]);
+    console.log(key, person[key]);
 };
 /*                  --  **  FOR OF LOOP **                                    */
-const colors = ["red","green","blue"];
+const colors = ["red", "green", "blue"];
 for (let color of colors) {
     console.log(color);
 };
 /*                  --  **  FOR EACH LOOP   **                                  */
 array.forEach(element => {
-    
+
 });
 /*                  --  **  WHILE LOOP  **                                    */
 let n = 0;
@@ -56,7 +56,7 @@ while (n < 10) {
 };
 /*                  --  **  DO WHILE LOOP   **                                 */
 var i = 1;
-do{
+do {
     i += 2;
 } while (i < 10);
 /*                  --  **  STRINGS **                                       */
@@ -65,8 +65,8 @@ const esc = "I don\ 't \n know";                                    //      \n N
 const len = str.length;                                             //      STRING LENGTH
 str.indexOf("lmno");                                                //      FIND SUBSTRING
 str.lastIndexOf("lmno");                                            //      LAST OCCURANCE
-str.slice(3,6);                                                     //      CUTS OUT "def"
-str.replace("abc","123");                                           //      FIND AND REPLACE
+str.slice(3, 6);                                                     //      CUTS OUT "def"
+str.replace("abc", "123");                                           //      FIND AND REPLACE
 str.toUpperCase();                                                  //      CONVERT TO UPPER CASE
 str.toLowerCase();                                                  //      CONVERT TO LOWER CASE
 str.concat(" ", str2);                                              //      "abc" + " " + str2
@@ -97,7 +97,7 @@ Number.POSITIVE_INFINITY                                            //      +INF
 var pi = Math.PI;                                                   //      3.141592653589793
 Math.round(4.4);                                                    //      4   -   rounded
 Math.round(4.5);                                                    //      =   5
-Math.pow(2,8);                                                      //      = 256 - 2 to the power of 8
+Math.pow(2, 8);                                                      //      = 256 - 2 to the power of 8
 Math.sqrt(49);                                                      //      = 7 - square root
 Math.abs(-3.14);                                                    //      = 3.14 - absolute, positive value
 Math.ceil(3.14);                                                    //      = 4 - rounded up
@@ -111,7 +111,7 @@ Math.exp(1);                                                        //      = 2.
 Math.random();                                                      //      random number between 0 and 1
 Math.floor(Math.random() * 5) + 1;                                  //      random integer, from 1 to 5
 /*                  --  **  ARRAYS  **                                        */
-var arr = [1,2,3,4,4];
+var arr = [1, 2, 3, 4, 4];
 arr.at(1);                                                           //                                                 2
 arr.toString();                                                      //     CONVERT THE ARRAY TO A STRING
 arr.push(5);                                                         //     ADD ELEMENT TO THE END                  :   [ 1, 2, 3, 4, 5 ]
@@ -120,20 +120,20 @@ arr.fill(1);                                                         //     REMO
 arr.shift();                                                         //     FILL EVERY ELEMENT                      :   [ 1, 1, 1, 1 ]
 arr.unshift(5);                                                      //     REMOVE FIRST ELEMENT                    :   [ 2, 3, 4 ]
 arr.reverse();                                                       //     ADD ELEMENT TO BEGINNING                :   [ 5, 1, 2, 3, 4 ]
-arr.map(item => 2*item);                                             //     SORT IN DESCENDING ORDER                :   [ 4, 3, 2, 1 ]
+arr.map(item => 2 * item);                                             //     SORT IN DESCENDING ORDER                :   [ 4, 3, 2, 1 ]
 arr.filter(item => item > 2);                                        //     IS ARRAY CONTAINS A SPECIFIED VALUE     :   TRUE
 arr.find(item => item > 2);                                          //     MAP ELEMENTS                            :   [ 2, 3, 6, 8 ]
 arr.every(item => item > 0);                                         //     FILTER ELEMENT                          :   [ 3, 4 ]
 arr.indexOf(4)                                                       //     RETURNS THE INDEX OF THE ELEMENT        :   2
 arr.findIndex(item => item === 2);                                   //     FIND ELEMENT                            :   3 (FIRST MATCH)
-arr.reduce((prev,curr) => prev+curr ,0);                             //                                                 TRUE
-arr.slice(1,4);                                                      //     SLICE ELEMENTS FROM [1] to [4-1]        :   2,4
-arr.splice(2,0, "i","p");                                            //     ADD ELEMENTS                            :   [ 1, 2, 'i', 'p', 3, 4 ]
+arr.reduce((prev, curr) => prev + curr, 0);                             //                                                 TRUE
+arr.slice(1, 4);                                                      //     SLICE ELEMENTS FROM [1] to [4-1]        :   2,4
+arr.splice(2, 0, "i", "p");                                            //     ADD ELEMENTS                            :   [ 1, 2, 'i', 'p', 3, 4 ]
 arr.join(" * ");                                                     //     JOIN                                    :   "1 * 2 * 3 * 4"
 arr.sort();                                                          //     
-x.sort(function(a,b){return a - b });                                //     
-x.sort(function(a,b){return b - a });                                //     SORT STRING ALPHABETICALLY 
-x.sort(function(a,b){return 0.5 - Math.random()});                   //     NUMERIC SORT
+x.sort(function (a, b) { return a - b });                                //     
+x.sort(function (a, b) { return b - a });                                //     SORT STRING ALPHABETICALLY 
+x.sort(function (a, b) { return 0.5 - Math.random() });                   //     NUMERIC SORT
 /*                  --**    DATES   **                                         */
 var d = new Date();
 Date("2023-06-23");                                                 //      DATE DECLARATION
@@ -158,32 +158,32 @@ try {                                                               //      BLOC
     console.log(err.message);
 }
 var x = document.getElementById("mynum").value;                     //      INPUT VALIDATION
-try{                                                                //      ERROR CASES
-    if(x == "") throw "empty";                                      
+try {                                                                //      ERROR CASES
+    if (x == "") throw "empty";
     if (isNaN(x)) throw "not a number";
     x = Number(x);
-    if(x > 10) throw "too high";
-} catch(err){                                                       //      IF THERE'S AN ERROR
+    if (x > 10) throw "too high";
+} catch (err) {                                                       //      IF THERE'S AN ERROR
     document.write("input is " + err);                              //      OUTPUT ERROR
     console.error(err);                                             //      WRITE THE ERROR IN CONSOLE
 } finally {                                                         //      EXECUTED REGARDLESS OF THE TRY / CATCH RESULT
-    document.write("</br />Done");                          
+    document.write("</br />Done");
 }
 /*                  --  **  ERRORS HANDLING IN JS **                                        */
 function name(params) {
     try {
-        
+
     } catch (error) {
-        
+
     }
     //  EXECUTES WHEN A JS PROMISE THAT HAS NO REJEACTION HANDLER IS REJACTED
-    window.addEventListener('unhandledrejection',function(){});
+    window.addEventListener('unhandledrejection', function () { });
 }
 /*                  --  **  JSON    **                                            */
-var strg = '{"names":['+                                            //      CREATE JSON OBJECT
-            '{"first":"Hakuna","lastN":"Matata"},'+
-            '{"first":"Joseph","lastN":"Cordoba"},'+
-            '{"first":"Air","lastN":"Jordan"}] }';
+var strg = '{"names":[' +                                            //      CREATE JSON OBJECT
+    '{"first":"Hakuna","lastN":"Matata"},' +
+    '{"first":"Joseph","lastN":"Cordoba"},' +
+    '{"first":"Air","lastN":"Jordan"}] }';
 myObj = JSON.parse(strg);                                           //      PARSE
 document.write(myObj.names[1].first);                               //      ACCESS
 var myJson = JSON.stringify(myObj);                                 //      STRINGIFY
@@ -191,11 +191,11 @@ localStorage.setItem("testJSON", myJson);                           //      STOR
 text = localStorage.getItem("testJSON");                            //      RETRIEVING DATA
 /*                  --  **    OBJECT  **                                        */
 var student = {                                                     //      OBJECT NAME
-    firstName:"Joseph",                                             //      LIST OF PROPERTIES AND VALUES
-    lastName:"Cordoba",
-    age:18,
-    height:170,
-    fullname: function() {                                          //      OBJECT FUNCTION
+    firstName: "Joseph",                                             //      LIST OF PROPERTIES AND VALUES
+    lastName: "Cordoba",
+    age: 18,
+    height: 170,
+    fullname: function () {                                          //      OBJECT FUNCTION
         return this.firstName + " " + this.lastName;
     }
 };
@@ -203,18 +203,18 @@ student.age = 19;                                                   //      SETT
 student[age]++;                                                     //      INCREMENTING
 nameStudent = student.fullname();                                          //      CALL OBJECT FUNCTION
 /*                  --  **    EVENTS  **                                        */
-var MediaEvent          = [ 'onabort', 'oncanplay', 'oncanplaythrough', 'ondurationchange', 'onended', 'onerror', 'onloadeddata', 'onloadedmetadata', 'onloadstart', 
-                            'onpause', 'onplay', 'onplaying', 'onprogress', 'onratechange', 'onseeked', 'onseeking', 'onstalled', 'onsuspend', 'ontimeupdate',
-                            'onvolumechange', 'onwaiting'];
-var MiscellaneousEvent  = [ 'transitionend', 'onmessage', 'onmousewheel', 'ononline', 'onoffline', 'onpopstate', 'onshow', 'onstorage', 'ontoggle', 'onwheel', 
-                            'ontouchcancel', 'ontouchend', 'ontouchmove', 'ontouchstart'];
-var MouseEvent          = [ 'onclick', 'oncontextmenu', 'ondblclick', 'onmousedown', 'onmouseenter', 'onmouseleave', 'onmousemove', 'onmouseover', 'onmouseout',
-                            'onmouseup'];
-var FrameEvent          = [ 'onabort', 'onbeforeunload', 'onerror', 'onhashchange', 'onload', 'onpageshow', 'onpagehide', 'onresize', 'onscroll', 'onunload'];
-var FormEvent           = [ 'onblur', 'onchange', 'onfocus', 'onfocusin', 'onfocusout', 'oninput', 'oninvalid', 'onreset', 'onsearch', 'onselec', 'onsubmit'];
-var DragEvent           = [ 'ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover', 'ondragstart', 'ondrop'];
-var AnimationEvent      = [ 'animationend', 'animationiteration', 'animationstart'];
-var KeyboardEvent       = [ 'onkeydown', 'onkeypress', 'onkeyup'];
+var MediaEvent = ['onabort', 'oncanplay', 'oncanplaythrough', 'ondurationchange', 'onended', 'onerror', 'onloadeddata', 'onloadedmetadata', 'onloadstart',
+    'onpause', 'onplay', 'onplaying', 'onprogress', 'onratechange', 'onseeked', 'onseeking', 'onstalled', 'onsuspend', 'ontimeupdate',
+    'onvolumechange', 'onwaiting'];
+var MiscellaneousEvent = ['transitionend', 'onmessage', 'onmousewheel', 'ononline', 'onoffline', 'onpopstate', 'onshow', 'onstorage', 'ontoggle', 'onwheel',
+    'ontouchcancel', 'ontouchend', 'ontouchmove', 'ontouchstart'];
+var MouseEvent = ['onclick', 'oncontextmenu', 'ondblclick', 'onmousedown', 'onmouseenter', 'onmouseleave', 'onmousemove', 'onmouseover', 'onmouseout',
+    'onmouseup'];
+var FrameEvent = ['onabort', 'onbeforeunload', 'onerror', 'onhashchange', 'onload', 'onpageshow', 'onpagehide', 'onresize', 'onscroll', 'onunload'];
+var FormEvent = ['onblur', 'onchange', 'onfocus', 'onfocusin', 'onfocusout', 'oninput', 'oninvalid', 'onreset', 'onsearch', 'onselec', 'onsubmit'];
+var DragEvent = ['ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover', 'ondragstart', 'ondrop'];
+var AnimationEvent = ['animationend', 'animationiteration', 'animationstart'];
+var KeyboardEvent = ['onkeydown', 'onkeypress', 'onkeyup'];
 /*                  --  **    OBJECTS  **                                        */
 const personObject = {
     name: 'personName',
@@ -232,7 +232,7 @@ Object.values(personObject);    //  ['personName',25,'male']
 //  GET ALL OBJECTS ENTRIES
 Object.entries(personObject);   // [['name','personName'],['age',25],['gender','male']]
 //  ASSIGN OBJECT TO ANOTHER OBJECT
-Object.assign(personObject,jobObject);  //  {name: 'personName',age: 25,gender: 'male',job: 'dev',salary: 1000}
+Object.assign(personObject, jobObject);  //  {name: 'personName',age: 25,gender: 'male',job: 'dev',salary: 1000}
 /*                  --  **    SCOPE  **                                        */
 //  GLOBAL SCOPE
 const pie = 3.14;
@@ -251,13 +251,53 @@ console.log(pie);  //  3.14
 console.log(numFunction);  //  ReferenceError: numFunction is not defined 
 console.log(fullName);  //  ReferenceError: fullName is not defined
 /*                  --  **    ASYNC/AWAIT  **                                        */
+/*   */
 //  USED ASYNC TO MAKE THE FUNCTION ACT ASYNCHRONOUS
 async function name(params) {
     try {
         //  USED AWAIT TO MAKE THE CODE WAIT UNTIL PROMISE RETURNS A RESULT
+        const res = await fetch('')
+        const data = await res.json()
+        return data
     } catch (errr) {
         console.log(errr)
     }
 }
-
-
+/*                  --  **  'THIS' KEYWORD  **                                        */
+/*
+ITS VALUE DEPENDS ON WHERE IT'S BEING INVOKED
+FOR EXAMPLE, IF IT'S INVOKED ALONE, ITS VALUE IS A GLOBAL OBJECT. IF IT'S GATHERED IN AN OBJECT THE VALUE IS AN OBJECT
+*/
+console.log(this);  //  RETURN GLOBAL
+var user = {
+    name: "devName",
+    getUser: function () {
+        return this;
+    }
+}
+user.getUser()  //  {NAME: "devName", getUser: f}
+/*                  --  **  HOISTING  **                                        */
+/* HOISTING IS A JS CONCEPT WHERE THE JS VARIABLES OR FUNCTIONS CAN BE ACCESSED BEFORE INITIALIZING
+VARIABLES DEFINED WITH "LET" CANT'T BE ACCESSED BEFORE INITIALIZING */
+userName = "userNameString" // THIS WORKS
+console.log(userName) // userNameString
+var userName = ""
+console.log(userName) // ""
+/*                  --  **  CLOSURE  **                                        */
+/*
+THE CLOSURE IS LIKE A FUNCTION WITH A BAG PACK, YOU MAY HAVE EXPERIENCED THAT SOMETIMES WHEN A FUNCTION IS INVOKED
+AND THE RETURNING VALUE IS SAVED TO A NEW VARIABLE, THE FUNCTION VARIABLES ARE STILL ACCESSIBLE 
+THIS CONCEPT IS CALLED CLOSURE
+*/
+function saveUserData(params) {
+    const a = "";
+    const b = "";
+    return function () {
+        return {
+            a,
+            b,
+        };
+    };
+}
+const c = saveUserData();
+console.log(us()); // { a: "", b: ""}
